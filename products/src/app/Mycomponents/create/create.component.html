@@ -1,0 +1,49 @@
+<div class="container py-5">
+  <div class="card shadow-lg rounded-4 p-4">
+    <h2 class="mb-4 text-center text-primary">
+      <i class="bi bi-plus-circle-fill me-2"></i>Create Product
+    </h2>
+    <form>
+      <div class="mb-3">
+        <label for="title" class="form-label fw-bold text-primary fs-5">
+          <i class="bi bi-tag-fill"></i>Title:
+        </label>
+        <input type="text" id="title" [(ngModel)]="formdata.title" name="title" class="form-control" placeholder="Enter product title" required>
+      </div>
+
+      <div class="mb-3">
+        <label for="description" class="form-label fw-bold text-primary fs-5">
+          <i class="bi bi-card-text"></i>Description:
+        </label>
+        <textarea id="description" [(ngModel)]="formdata.description" name="description" class="form-control" rows="4" placeholder="Enter product description" required></textarea>
+      </div>
+
+      <div class="mb-3">
+        <label for="category" class="form-label fw-bold text-primary fs-5">
+          <i class="bi bi-collection-fill"></i>Category:
+        </label>
+        <input type="text" id="category" [(ngModel)]="formdata.category" name="category" class="form-control" placeholder="Enter category" required>
+      </div>
+
+      <div class="mb-3">
+        <label for="image_url" class="form-label fw-bold text-primary fs-5">
+          <i class="bi bi-image-fill"></i>Image URL:
+        </label>
+        <input type="url" id="image_url" [(ngModel)]="formdata.image" name="image" class="form-control" placeholder="https://example.com/image.jpg">
+      </div>
+
+      <div class="mb-4">
+        <label for="price" class="form-label fw-bold text-primary fs-5">
+          <i class="bi bi-currency-dollar"></i>Price:
+        </label>
+        <input type="number" id="price" [(ngModel)]="formdata.price" name="price" class="form-control" step="0.01" min="0" placeholder="Enter price" required>
+      </div>
+
+      <div class="text-center">
+        <button type="button" class="btn btn-success px-4 py-2" (click)="create()">
+          <i class="bi bi-check-circle-fill me-1"></i>Create
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
